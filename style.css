@@ -26,7 +26,7 @@
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 a {
     text-decoration: none;
@@ -160,7 +160,9 @@ h1, h2,h3 {
 }
 #blocArticles article hr{
     width: 20%;
-    color: var(--bordeaux);
+    background-color: var(--bordeaux);
+    border: none;
+    height: 5px;
     margin: 10px 0;
 }
 #blocArticles article img {
@@ -171,9 +173,15 @@ h1, h2,h3 {
 /* ===============design paysage============== */
 #design {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #design #titreEtImage {
     width: 40%;
+}
+#design #titreEtImage img {
+    display: none;
+    width: 300px;
 }
 #design #texteDesign {
     width: 60%;
@@ -186,17 +194,20 @@ h1, h2,h3 {
     margin: 50px 20px;
 }
 #design #texteDesign hr {
+    display: block;
     width: 40px;
-    color: var(--bordeaux);
-    margin-top: 60px;
+    height: 5px;
+    background-color: var(--bordeaux);
+    border: none;
+    margin-top: 10px;
     margin-bottom: 60px;
 }
 #design #texteDesign p{
-    margin-right: 80px;
+    
     margin-bottom: 50px;
 }
 #design #texteDesign ul {
-    columns: 2;
+
     margin-bottom: 50px;
 }
 #design #texteDesign ul li {
@@ -204,7 +215,7 @@ h1, h2,h3 {
     font-size: 1.5rem;
     line-height: 35px;
     background: url(images-garden/feuille-picto.jpg) no-repeat;
-    background-size: 9%;
+    background-size: 30px;
     background-position: left 10px;
     padding-left: 45px;
     
@@ -223,12 +234,41 @@ h1, h2,h3 {
     background-size: cover;
 }
 /* ============footer============== */
-#footer #refs address,
-#footer #copyright p {
+footer {
+    background-color: var(--fond-footer);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+footer #refs address {
+    font-style: normal;
+}
+footer #refs address,
+footer #copyright p {
+    font-family: 'megan_juneregular';
     color: white;
 }
+footer #refs i {
+    color: var(--vert);
+}
+footer #copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+    line-height: 30px;
+}
+footer #copyright #ml {
+    color: #FFF;
+}
+footer #copyright #fleche {
+    width: 30px;
+}
+
 
 @media screen and (min-width: 768px) {
+    /* ==================header============= */
    #bandeau #menuPrincipal ul.on{
     flex-direction: row;
     justify-content: flex-end;
@@ -243,19 +283,33 @@ h1, h2,h3 {
    #bandeau #menuPrincipal ul li a{
     padding-bottom: 14px;
    }
+   /* =========slider============ */
    .nivo-caption h2,
    .nivo-caption p {
     display: block;
    }
-
+   /* ===============blocArticle=================== */
    #blocArticles {
     display: flex;
     flex-direction: row;
    }
-
-   #design #titreEtImage {
-    background: url(images-garden/home-02.jpg) bottom left no-repeat;
-    background-size: 300px auto;
+   /* ===========bloc design================= */
+   #design {
+    flex-direction: row;
+   }
+   
+   #design #titreEtImage img{
+    display: block;
    }
 
+   #design #texteDesign hr {
+    margin-top: 60px;
+   }
+   #design #texteDesign p {
+    margin-right: 80px;
+    margin-bottom: 50px;
+   }
+   #design #texteDesign ul {
+    columns: 2;
+   }
 }
