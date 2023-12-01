@@ -169,14 +169,64 @@ h1, h2,h3 {
 }
 
 /* ===============design paysage============== */
-#design #titreEtImage img {
-    display: none;
-}
 #design {
     display: flex;
 }
-
-
+#design #titreEtImage {
+    width: 40%;
+}
+#design #texteDesign {
+    width: 60%;
+    margin-bottom: 80px;
+}
+#design #titreDesign {
+    width: 250px;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin: 50px 20px;
+}
+#design #texteDesign hr {
+    width: 40px;
+    color: var(--bordeaux);
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+#design #texteDesign p{
+    margin-right: 80px;
+    margin-bottom: 50px;
+}
+#design #texteDesign ul {
+    columns: 2;
+    margin-bottom: 50px;
+}
+#design #texteDesign ul li {
+    font-family: 'megan_juneregular';
+    font-size: 1.5rem;
+    line-height: 35px;
+    background: url(images-garden/feuille-picto.jpg) no-repeat;
+    background-size: 9%;
+    background-position: left 10px;
+    padding-left: 45px;
+    
+}
+#design #texteDesign #boutonDesign {
+    color: white;
+    background-color: var(--vert);
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+/* ====================pub======================== */
+#pub {
+    width: 100%;
+    min-height: 200px;
+    background: url(images-garden/home-05.jpg);
+    background-size: cover;
+}
+/* ============footer============== */
+#footer #refs address,
+#footer #copyright p {
+    color: white;
+}
 
 @media screen and (min-width: 768px) {
    #bandeau #menuPrincipal ul.on{
@@ -203,8 +253,9 @@ h1, h2,h3 {
     flex-direction: row;
    }
 
-   #design #titreEtImage img {
-    display: block;
+   #design #titreEtImage {
+    background: url(images-garden/home-02.jpg) bottom left no-repeat;
+    background-size: 300px auto;
    }
 
 }
