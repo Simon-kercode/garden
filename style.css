@@ -1,0 +1,210 @@
+/* variables */
+:root {
+    --vert: #17CD28;
+    --bordeaux: #933645;
+    --fond-blanc: #FFF;
+    --fond-creme: #dedddd;
+    --fond-footer: #0C0B0B;
+}
+
+/* oswald-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/oswald-v53-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+/* megan June (rajouter le fonts/) */
+@font-face {
+    font-family: 'megan_juneregular';
+    src: url('fonts/megan_june-webfont.woff2') format('woff2'),
+         url('fonts/megan_june-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Oswald';
+    font-size: 18px; 
+}
+
+.container {
+    max-width: 1200px; /*si écran > 1200px */
+    width: 100%;
+    margin: 0 auto;
+}
+h1, h2,h3 {
+    font-family: 'megan_juneregular';
+}
+
+/* ===============header============== */
+#bandeau {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'megan_juneregular';
+}
+#bandeau h1 {
+    width: 20%;
+}
+#bandeau h1 a{
+    font-size: 3.5rem;
+    color: black;
+    border-bottom: 14px solid var(--bordeaux);
+    margin-left: 30px;
+}
+#bandeau #menuPrincipal {
+    width: 60%;
+}
+#burger {
+    text-align: right;
+    font-size: 3rem;
+    margin: 15px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+#bandeau #menuPrincipal ul{
+    display: flex;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    display: none;
+}
+#bandeau #menuPrincipal ul.on {
+    flex-direction: column;
+    justify-content: center;
+}
+#bandeau #menuPrincipal ul li {
+    margin-left: 5%;
+    line-height: 65px;
+}
+#bandeau #menuPrincipal ul li a {
+    color: black;
+    font-weight: normal;
+}
+#bandeau #menuPrincipal ul li a:hover,
+#bandeau #menuPrincipal ul li a.choix {
+    border-bottom: 14px solid var(--vert);
+    padding-bottom: 5px;
+}
+
+
+/* =========slider============ */
+.slider-wrapper{
+    margin-top: 15px;
+    background-color: var(--fond-creme);
+}
+.nivo-caption h2,
+.nivo-caption p {
+    display: none;
+}
+.nivo-caption {
+    padding: 20px;
+    background: transparent;
+    bottom: 40%;
+    left: 35%;
+}
+.nivo-caption h2 {
+    text-transform: uppercase;
+    font-size: 6rem;
+}
+.nivo-caption p {
+    font-family: 'megan_juneregular';
+    font-size: 2rem;
+}
+.nivo-caption #pro {
+    border-bottom: 14px solid var(--fond-blanc);
+    padding-bottom: 10px;
+    color: var(--vert);
+}
+/* changement des puces */
+.theme-default .nivo-controlNav a {
+    background: url(images-garden/blanc.jpg);
+}
+.theme-default .nivo-controlNav a.active{
+    background: url(images-garden/rouge.jpg);
+}    
+
+/* =================bloc d'articles================== */
+#blocArticles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--fond-creme);
+}
+#blocArticles article {
+    background-color: var(--fond-blanc);
+    width: 33%;
+    padding: 70px;
+    border: 1px solid grey;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#blocArticles article .titreBlocs {
+    text-transform: uppercase;
+}
+#blocArticles article hr{
+    width: 20%;
+    color: var(--bordeaux);
+    margin: 10px 0;
+}
+#blocArticles article img {
+    width: 50px;
+    margin: 0 auto 50px;
+}
+
+/* ===============design paysage============== */
+#design #titreEtImage img {
+    display: none;
+}
+#design {
+    display: flex;
+}
+
+
+
+@media screen and (min-width: 768px) {
+   #bandeau #menuPrincipal ul.on{
+    flex-direction: row;
+    justify-content: flex-end;
+   }
+   #bandeau #menuPrincipal ul {
+    display: flex;
+    justify-content: flex-end;
+   }
+   #menuPrincipal #burger{
+    display: none;
+   }
+   #bandeau #menuPrincipal ul li a{
+    padding-bottom: 14px;
+   }
+   .nivo-caption h2,
+   .nivo-caption p {
+    display: block;
+   }
+
+   #blocArticles {
+    display: flex;
+    flex-direction: row;
+   }
+
+   #design #titreEtImage img {
+    display: block;
+   }
+
+}

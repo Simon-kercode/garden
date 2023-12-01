@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden</title>
+    <!-- slider -->
+    <link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+    <!-- lien menu burger (cdn) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header h1 et nav -->
+    <header id="bandeau" class="container" role="banner">
+        <h1><a href="index.html">G</a></h1>
+        <nav id="menuPrincipal" role="navigation">
+            <div id="burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul>
+                <li><a class="choix" href="index.html">Accueil</a></li>
+                <!-- &nbsp; = espace insécable pour éviter le chevauchement -->
+                <li><a href="#">A&nbsp;Propos</a></li>
+                <li><a href="galeries.html">Galerie</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenu" class="container">
+        <!-- slider -->
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="images-garden/swiper-1.jpg"  alt="pont" data-transition="fade" title="#htmlcaption"/>
+                <img src="images-garden/swiper-2.jpg"  alt="rond" data-transition="fade"/>
+                <img src="images-garden/swiper-3.jpg"  alt="hippo" data-transition="fade"/>
+            </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+                <h2>G a r d e n</h2>
+                <p><span id="pro">PRO</span> DESIGN D'EXTERIEUR</p>
+            </div>
+        </div>
+        <!-- 3 blocs -->
+        <section id="blocArticles" class="container">
+            <article id="paysage">
+                <a href="#"><img src="images-garden/ampoule.PNG" alt="ampoule"></a>
+                <h3 class="titreBlocs">Idees de paysages</h3>
+                <hr size="5" noshade>
+                <p class="texteBlocs">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Commodi id, animi mollitia debitis facilis reiciendis quod culpa vero atque 
+                    repudiandae magni tenetur, enim, a impedit!</p>
+            </article>
+            <article id="irrigation">
+                <a href="#"><img src="images-garden/goutte.PNG" alt="goutte"></a>
+                <h3 class="titreBlocs">Irrigation</h3>
+                <hr size="5" noshade>
+                <p class="texteBlocs">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Commodi id, animi mollitia debitis facilis reiciendis quod culpa vero atque 
+                    repudiandae magni tenetur, enim, a impedit!</p>
+            </article>
+            <article id="photos">
+                <a href="#"><img src="images-garden/photos.PNG" alt="iconePhotos"></a>
+                <h3 class="titreBlocs">Galerie photos</h3>
+                <hr size="5" noshade>
+                <p class="texteBlocs">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Commodi id, animi mollitia debitis facilis reiciendis quod culpa vero atque 
+                    repudiandae magni tenetur, enim, a impedit!</p>
+            </article>
+        </section>
+        <!-- design de paysage -->
+        <article id="design">
+            <div id="titreEtImage">
+                <h2 id="titreDesign">Le design de paysage</h2>
+                <img src="images-garden/home-02.jpg" alt="Buisson-coeur">
+            </div>
+            <div id="texteDesign">
+                <hr size="5" noshade>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Excepturi veritatis facilis cumque nemo, 
+                    harum ratione odit debitis incidunt mollitia dignissimos 
+                    nihil veniam tenetur asperiores adipisci corporis, doloribus 
+                    suscipit accusantium. Possimus ratione placeat aut vel voluptates!
+                </p>
+                <ul>
+                    <li>Balance</li>
+                    <li>Unité</li>
+                    <li>Simplicité</li>
+                    <li>Lignes et rythme</li>
+                    <li>Proportions</li>
+                    <li>Harmonie</li>
+                </ul>
+                <a href="#">Plus d'infos</a>
+            </div>
+        </article>
+    </main>
+    <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+    <script src="scripts/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('#slider').nivoSlider();
+        });
+        $("#menuPrincipal #burger i").click(function() {
+            // on ajoute une classe "on"
+            $("#menuPrincipal ul").addClass("on").slideToggle(500)
+        });
+    </script>
+</body>
+</html>
