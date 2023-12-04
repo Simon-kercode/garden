@@ -1,0 +1,19 @@
+.carte{
+    width: 330px;
+    height: 530px;
+    margin: 50px auto;
+    background-color: #F1F1F1;
+    border-radius: 5px;
+    display: grid;
+    /* 6 rangées / 3 colonnes */
+    grid-template: repeat(2, 100px) 50px repeat(2, 100px) 80px / repeat(3, 110px);
+}
+
+.divImg {
+    grid-area: 1/1/3/4;
+    background: url(tarteauxpommes.JPG);
+    /* pour que l'image s'affiche en entier */
+    background-size: cover;
+    /* pour que l'image se centre */
+    background-position: 50% 50%;
+}

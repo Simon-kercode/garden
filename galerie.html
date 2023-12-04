@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="bandeau" class="container" role="banner">
+        <h1><a href="index.html">G</a></h1>
+        <nav id="menuPrincipal" role="navigation">
+            <div id="burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul>
+                <li><a class="choix" href="index.html">Accueil</a></li>
+                <!-- &nbsp; = espace insécable pour éviter le chevauchement -->
+                <li><a href="#">A&nbsp;Propos</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="paysages" class="container">
+            <header id="galerieHeader">
+                <h2>Idées de Paysage</h2>
+                <nav id="menuPaysages">
+                    <ul>
+                        <li><a href="#" id="tout">Tout</a></li>
+                        <li><a href="#" id="jardin">Jardins</a></li>
+                        <li><a href="#" id="foret">Forêts</a></li>
+                    </ul>
+                </nav>
+            </header>
+       
+        <div class="containerGrid container">
+            <article class="item tout jardin">
+                <h3>Claustra</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quos!</p>
+                <img src="images-garden/galerie/anis-azhar.jpg" alt="claustra">
+            </article>
+            <article class="item tout foret">
+                <h3>Givre</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quos!</p>
+                <img src="images-garden/galerie/annie-spratt.jpg" alt="givre">
+            </article>
+            <article class="item tout jardin">
+                <h3>Brume</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quos!</p>
+                <img src="images-garden/galerie/annie-spratt2.jpg" alt="brume">
+            </article>
+            <article class="item tout foret">
+                <h3>Plants</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quos!</p>
+                <img src="images-garden/galerie/daniel-oberg.jpg" alt="plants">
+            </article>
+            <article class="item tout jardin">
+                <h3>Arche</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quos!</p>
+                <img src="images-garden/galerie/kailash-sankar.jpg" alt="arche">
+            </article>
+            <article class="item tout jardin">
+                <h3>Sous-Bois</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quos!</p>
+                <img src="images-garden/galerie/maria-hada.jpg" alt="sous-bois">
+            </article>
+            <article class="item tout jardin">
+                <h3>Portail</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quos!</p>
+                <img src="images-garden/galerie/peter-li.jpg" alt="portail">
+            </article>
+            <article class="item tout foret">
+                <h3>Cabane</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quos!</p>
+                <img src="images-garden/galerie/xypher-zhyan.jpg" alt="cabane">
+            </article>
+        </div>
+        <div id="pub" class="container">
+            
+        </div>
+        </section>
+    </main>
+    <footer class="container">
+        <div id="refs">
+            <address>GARDEN<br>ZA des petits Bois, 56103 Lorient cedex 7</address>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-pinterest"></i></a>
+        </div>
+        <div id="copyright">
+            <a href="#bandeau"><img id="fleche" src="images-garden/flechehaut.png" alt="remonte"></a>
+            <p>Copyright Greta 2018 - <a id="ml" href="#">Mentions légales</a></p>
+        </div>
+    </footer>
+    <script src="scripts/jquery-1.9.0.min.js"></script>
+    <script src="scripts/categories.js"></script>
+    <script>
+        $("#menuPrincipal #burger i").click(function() {
+        $("#menuPrincipal ul").addClass("on").slideToggle(500)
+        });
+    </script>
+</body>
+</html>

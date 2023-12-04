@@ -266,6 +266,60 @@ footer #copyright #fleche {
     width: 30px;
 }
 
+/* ===============galerie============ */
+#paysages #galerieHeader {
+    margin-top: 40px;
+}
+
+#paysages #galerieHeader h2 {
+    font-size: 3rem;
+    margin: 20px;
+}
+#paysages #galerieHeader #menuPaysages ul{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #CCC;
+}
+#paysages #galerieHeader #menuPaysages li {
+    margin: 20px 20px 40px;
+}
+#paysages #galerieHeader #menuPaysages li a:hover,
+#paysages #galerieHeader #menuPaysages li a.on {
+    background-color: green;
+}
+#paysages #galerieHeader #menuPaysages li a {
+    color: white;
+    text-transform: uppercase;
+    background-color: var(--vert);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.containerGrid {
+    width: 100%;
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, 290px);
+    gap: 10px;
+    justify-content: center;
+}
+.containerGrid .item p {
+    font-size: 1rem;
+}
+.item {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, .2);
+}
+.containerGrid .item:hover{
+    box-shadow: 0 16px 16px 0 rgba(0,0,0,0.4);
+}
+.item h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+.item img{
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
 
 @media screen and (min-width: 768px) {
     /* ==================header============= */
