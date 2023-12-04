@@ -1,14 +1,14 @@
 .carte{
     width: 330px;
     height: 530px;
-    margin: 50px auto;
+    margin: 10px auto;
     background-color: #F1F1F1;
     border-radius: 5px;
     display: grid;
     /* 6 rangées / 3 colonnes */
     grid-template: repeat(2, 100px) 50px repeat(2, 100px) 80px / repeat(3, 110px);
 }
-
+/* grid-area début rangée/début colonne/fin rangée/fin colonne */
 .divImg {
     grid-area: 1/1/3/4;
     background: url(tarteauxpommes.JPG);
@@ -16,4 +16,64 @@
     background-size: cover;
     /* pour que l'image se centre */
     background-position: 50% 50%;
+    box-shadow: 0 10px 40px  rgba(0, 0, 0,.5);
+    /* 90% de luminosité */
+    filter: brightness(90%);
+}
+.titre {
+    grid-area: 3/1/4/4;
+    font-size: 28px;
+    font-weight: 500;
+    padding: 20px;
+}
+hr{
+    opacity: 0.8;
+}
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.icone {
+    width: 28px;
+    margin-right: 10px;
+}
+span {
+    font-weight: 600;
+}
+.infos {
+    grid-area: 5/1/6/4;
+    padding: 5px 20px;
+    font-size: 14px;
+    text-align: justify;
+}
+.btnSection {
+    grid-area: 6/1/7/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnSection a{
+    display: block;
+    width: 200px;
+    height: 30px;
+    background-color: brown;
+    text-decoration: none;
+    color: #E2E2E2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/* ==============grille============ */
+
+#mesCartes {
+    margin: 100px auto;
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 330px);
+    gap: 10px;
+    justify-content: center;
 }
