@@ -97,8 +97,6 @@ h1, h2,h3 {
     border-bottom: 14px solid var(--vert);
     padding-bottom: 5px;
 }
-
-
 /* =========slider============ */
 .slider-wrapper{
     margin-top: 15px;
@@ -279,6 +277,7 @@ footer #copyright #fleche {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid #CCC;
+    margin-bottom: 50px;
 }
 #paysages #galerieHeader #menuPaysages li {
     margin: 20px 20px 40px;
@@ -320,7 +319,117 @@ footer #copyright #fleche {
   border-radius: 0 0 10px 10px;
 }
 
-
+/* ===============contact=============== */
+#titreContact {
+    font-size: 3rem;
+    margin: 20px;
+}
+.mainContact p{
+    width: 80%;
+    margin: auto;
+}
+#formContact {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#formContact p {
+    border: solid 1px var(--vert);
+    width: 80%;
+    margin: 8px 8px;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 1.1rem;
+}
+#formContact p input:focus {
+    outline:none
+}
+#formContact textarea:focus {
+    outline: none
+}
+#formContact p:nth-of-type(2),
+#formContact p:nth-of-type(4) {
+    border: none;
+    width: 83.5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+#formContact p:nth-of-type(2) input,
+#formContact p:nth-of-type(4) input {
+    width: 46%;
+    padding: 16px 32px 12px 12px;
+    border: solid 1px var(--vert);
+    border-radius: 20px;
+    margin-right: 10px;
+}
+#formContact p input::placeholder {
+    color: rgb(0, 0, 0);
+    /* opacité du placeholder par défaut est en dessous de 1 */
+    opacity: 1;
+    font-family: 'Oswald';
+    font-size: 1.1rem;
+}
+#formContact textarea {
+    width: 100%;
+    border: none;
+    font-family: 'Oswald';
+    font-size: 1.1rem;
+}
+#formContact textarea::placeholder {
+    color: rgb(0, 0, 0);
+    /* opacité du placeholder par défaut est en dessous de 1 */
+    opacity: 1;
+    font-family: 'Oswald';
+    font-size: 1.1rem;
+}
+#formContact p:nth-of-type(5) input {
+    border: none;
+    width: 100%;
+}
+#formContact p select {
+    background: none;
+    border: none;
+    width: 100%;
+}
+#formContact p label {
+    display: inline-block;
+    margin: 0 5px 0 10px;
+}
+#formContact p:nth-of-type(8), 
+#formContact p:nth-of-type(9) {
+    border: none;
+}
+#formContact p:nth-of-type(9) {
+    text-align: right;
+}
+#formContact .bouton {
+    border: none;
+    background-color: var(--vert);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 5px;
+    font-family: 'Oswald';
+    font-size: 1.4rem;
+}
+#formContact a {
+    color: black;
+}
+#formContact a:hover {
+    text-decoration: underline;
+}
+#formContact p select {
+    font-family: 'Oswald';
+    font-size: 1.2rem;
+}
+#formContact p select option.taille {
+    font-family: 'Oswald';
+    font-size: 1.1rem;
+}
+#formContact #boutonEnvoyer {
+    background-color: aquamarine;
+}
 @media screen and (min-width: 768px) {
     /* ==================header============= */
    #bandeau #menuPrincipal ul.on{

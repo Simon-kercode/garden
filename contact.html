@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="bandeau" class="container" role="banner">
+        <h1><a href="index.html">G</a></h1>
+        <nav id="menuPrincipal" role="navigation">
+            <div id="burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul>
+                <li><a id="lienAccueil" href="index.html">Accueil</a></li>
+                <!-- &nbsp; = espace insécable pour éviter le chevauchement -->
+                <li><a id="lienPropos" href="#">A&nbsp;Propos</a></li>
+                <li><a id="lienGalerie" href="galerie.html">Galerie</a></li>
+                <li><a id="lienServices" href="#">Services</a></li>
+                <li><a id="lienContact" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenu" class="container mainContact">
+        <h2 id="titreContact">Nous contacter</h2>
+        <p>Adressez-nous votre demande à l'aide du formulaire ci-dessous.
+            Veiller à bien remplir vos coordonnées (adresse email)
+            qui nous permettront de vous répondre.
+        </p>
+        <form id="formContact" action="envoyerForm.php" method="post">
+            <p>
+            <select name="identité">
+                <option value="" class="taille">Vous êtes</option>
+                <option value="particulier" class="taille">Un particulier</option>
+                <option value="professionnel" class="taille">Un professionnel</option>
+            </select>
+            </p>
+            <p>
+                <input type="text" name="nom" placeholder="Nom *">
+                <input type="text" name="prenom" placeholder="Prénom *">
+            </p>
+            <p>
+            <select name="souhait">
+                <option value="" class="taille">Vous souhaitez *</option>
+                <option value="mail" class="taille">Etre contacté par mail</option>
+                <option value="telephone" class="taille">Etre contacté par téléphone</option>
+            </select>
+            </p>
+            <p><input type="email" name="email" placeholder="E-mail">
+               <input type="tel" name="telephone" placeholder="Telephone">
+            </p>
+            <p>
+                <input type="text" name="sujet" placeholder="Sujet *">
+            </p>
+            <p>
+                <textarea name="message" id="message" rows="8" placeholder="Comment pouvons-nous vous aider ?" cols="30" rows="10">
+                </textarea>
+            </p>
+            <p>
+                Vous possédez :<br>
+                <input type="checkbox" name="choix" id="jardin" value="jardin">
+                <label for="jardin">Un jardin</label>
+                <input type="checkbox" id="animaux" name="choix" value="animaux">
+                <label for="animaux">Des animaux</label>
+                <input type="checkbox" id="autre" name="choix" value="autre">
+                <label for="autre">Autre</label>
+            </p>
+            <p>
+                <input type="checkbox" id="rgpd" name="rgpd" value="rgpd">
+                <label for="rgpd">J'autorise ce site à utiliser mes données personnelles
+                    selon notre <a href="#">politique de confidentialité</a>
+                </label>
+            </p>    
+            <p> <input class="bouton" type="reset" value="Annuler">
+                <input class="bouton" id="boutonEnvoyer" type="submit" value="Envoyer">
+            </p>
+        </form>
+
+        <div id="pub" class="container">
+            
+        </div>
+    </main>
+    <footer class="container">
+        <div id="refs">
+            <address>GARDEN<br>ZA des petits Bois, 56103 Lorient cedex 7</address>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-pinterest"></i></a>
+        </div>
+        <div id="copyright">
+            <a href="#bandeau"><img id="fleche" src="images-garden/flechehaut.png" alt="remonte"></a>
+            <p>Copyright Greta 2018 - <a id="ml" href="#">Mentions légales</a></p>
+        </div>
+    </footer>
+    <script src="scripts/jquery-1.9.0.min.js"></script>
+    <script src="scripts/choix.js"></script>
+    <script src="scripts/categories.js"></script>
+    <script>
+        $("#menuPrincipal #burger i").click(function() {
+        $("#menuPrincipal ul").addClass("on").slideToggle(500)
+        });
+    </script>
+    <!-- verrouiller le bouton envoyer si la case rgpd est non cochée -->
+    <script>
+        $(document).ready(function() {
+        $('#boutonEnvoyer').attr("disabled", true);
+        $('#rgpd').change(function() {
+        $('#boutonEnvoyer').css('background','#17CD28').attr('disabled', $('#rgpd:checked').length == 0);
+        });
+    })
+        // $("#rgpd").click(function(event){
+        //     $('#boutonEnvoyer').css('background','#17CD28').prop("disabled",false);
+        // });
+    </script>
+</body>
+</html>

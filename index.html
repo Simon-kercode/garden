@@ -20,16 +20,16 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <ul>
-                <li><a class="choix" href="index.html">Accueil</a></li>
+                <li><a id="lienAccueil" href="index.html">Accueil</a></li>
                 <!-- &nbsp; = espace insécable pour éviter le chevauchement -->
-                <li><a href="#">A&nbsp;Propos</a></li>
-                <li><a href="galeries.html">Galerie</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a id="lienPropos" href="#">A&nbsp;Propos</a></li>
+                <li><a id="lienGalerie" href="galerie.html">Galerie</a></li>
+                <li><a id="lienServices" href="#">Services</a></li>
+                <li><a id="lienContact" href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main id="contenu" class="container">
+    <main id="contenu" class="container mainAccueil">
         <!-- slider -->
         <div class="slider-wrapper theme-default">
             <div id="slider" class="nivoSlider">
@@ -114,6 +114,7 @@
         </div>
     </footer>
     <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+    <script src="scripts/choix.js"></script>
     <script src="scripts/jquery.nivo.slider.js"></script>
     <script type="text/javascript">
         $(window).load(function() {
